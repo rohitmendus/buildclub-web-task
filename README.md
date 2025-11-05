@@ -48,3 +48,10 @@ You’re free to:
    cd <repo-name>
    npm install
    npm start
+3. **Make your changes** inside the existing React project.
+
+4. **Test** your design locally.
+
+5. **Commit and push** your final version.
+
+6. **Create a Pull Request (PR)** to this repository.
