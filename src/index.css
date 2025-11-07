@@ -1,4 +1,27 @@
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-text: #000000; /* black */
+  --color-background: #ffffff; /* white */
+  --color-primary: #0E1925; /* dark navy blue */
+  --color-secondary: #fff705; /* yellow */
+  --color-accent: #303235; /* grey */
+
+  --font-heading: "Inter", sans-serif;
+  --font-body: "Poppins", sans-serif;
+
+  --text-sm: 0.750rem;
+  --text-base: 1rem;
+  --text-xl: 1.333rem;
+  --text-2xl: 1.777rem;
+  --text-3xl: 2.369rem;
+  --text-4xl: 3.158rem;
+  --text-5xl: 4.210rem;
+}
+
+
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +88,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
