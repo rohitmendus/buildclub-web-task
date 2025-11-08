@@ -108,7 +108,7 @@ export default function About() {
               <h3 className="text-xl sm:text-2xl font-heading font-bold mb-2">
                 {item.title}
               </h3>
-              <p className="text-sm sm:text-base text-background/90 leading-relaxed max-w-[18rem]">
+              <p className="text-sm sm:text-base leading-relaxed max-w-[18rem]">
                 {item.desc}
               </p>
             </motion.div>
