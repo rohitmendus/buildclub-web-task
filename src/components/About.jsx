@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { FaLightbulb, FaCode, FaUsersCog, FaTools } from "react-icons/fa";
+import { IoSettings } from "react-icons/io5";
 
 export default function About() {
   return (
@@ -38,7 +40,7 @@ export default function About() {
           <span className="text-secondary">launch</span> together.
         </p>
 
-        {/* Accent divider */}
+        {/* Divider */}
         <motion.div
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
@@ -59,19 +61,19 @@ export default function About() {
         >
           {[
             {
-              emoji: "💡",
+              icon: <FaLightbulb className="text-yellow-400 text-5xl sm:text-6xl mb-3" />,
               title: "Learn",
               desc: "Explore new tech, frameworks, and ideas every week.",
               color: "bg-accent",
             },
             {
-              emoji: "🧠",
+              icon: <FaCode className="text-primary text-5xl sm:text-6xl mb-3" />,
               title: "Build",
               desc: "Turn imagination into code — one project at a time.",
               color: "bg-secondary text-primary",
             },
             {
-              emoji: "🚀",
+              icon: <FaUsersCog className="text-yellow-400 text-5xl sm:text-6xl mb-3" />,
               title: "Collaborate",
               desc: "Work in teams, share ideas, and grow together.",
               color: "bg-accent",
@@ -94,17 +96,9 @@ export default function About() {
                 boxShadow: "0 0 20px rgba(255, 247, 5, 0.4)",
                 transition: { type: "tween", duration: 0.1 },
               }}
-              className={`
-                relative flex flex-col items-center justify-center
-                ${item.color}
-                rounded-xl px-6 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12
-                shadow-lg cursor-pointer select-none transition-all duration-300
-                w-full sm:w-[46%] lg:w-[30%] text-center
-              `}
+              className={`relative flex flex-col items-center justify-center ${item.color} rounded-xl px-6 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12 shadow-lg cursor-pointer select-none transition-all duration-300 w-full sm:w-[46%] lg:w-[30%] text-center`}
             >
-              <span className="text-3xl sm:text-4xl md:text-5xl mb-3">
-                {item.emoji}
-              </span>
+              {item.icon}
               <h3 className="text-xl sm:text-2xl font-heading font-bold mb-2">
                 {item.title}
               </h3>
@@ -122,7 +116,7 @@ export default function About() {
         animate={{ y: [0, -10, 0] }}
         transition={{ duration: 5, repeat: Infinity }}
       >
-        🔧
+        <IoSettings/>
       </motion.div>
 
       <motion.div
@@ -130,7 +124,7 @@ export default function About() {
         animate={{ y: [0, 15, 0] }}
         transition={{ duration: 4, repeat: Infinity }}
       >
-        ⚙️
+        <FaTools />
       </motion.div>
     </section>
   );
