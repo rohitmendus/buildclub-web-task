@@ -4,17 +4,18 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-primary text-background px-6 py-24 md:py-32"
+      className="relative overflow-hidden bg-primary text-background px-4 sm:px-6 md:px-12 lg:px-20 py-16 sm:py-24 md:py-32"
     >
-      {/* Subtle dark overlay instead of heavy gradient */}
-      <div className="absolute inset-0 bg-primary/80"></div>
+      {/* Background overlay */}
+      <div className="absolute inset-0 bg-primary/85"></div>
 
+      {/* Main content container */}
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="relative z-10 max-w-4xl mx-auto text-center md:text-left"
+        className="relative z-10 max-w-6xl mx-auto text-center md:text-left"
       >
         {/* Heading */}
         <motion.h2
@@ -22,18 +23,18 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="text-5xl font-heading font-bold mb-6 text-secondary"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 text-secondary"
         >
           About Buildclub
         </motion.h2>
 
         {/* Description */}
-        <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto">
+        <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto md:mx-0">
           Buildclub is not just a tech community — it’s a playground for
           innovators. We bring together passionate students who love to explore
-          new technologies, from AI and Machine Learning to IOT and
-          robotics. Here, we <span className="text-secondary">learn</span>,
-          <span className="text-secondary"> build</span>, and{" "}
+          new technologies, from AI and Machine Learning to IoT and robotics.
+          Here, we <span className="text-secondary">learn</span>,{" "}
+          <span className="text-secondary">build</span>, and{" "}
           <span className="text-secondary">launch</span> together.
         </p>
 
@@ -43,11 +44,19 @@ export default function About() {
           whileInView={{ scaleX: 1 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
           viewport={{ once: true }}
-          className="h-1 w-32 bg-secondary mx-auto md:mx-0 mt-8 rounded-full origin-left"
+          className="h-1 w-24 sm:w-32 bg-secondary mx-auto md:mx-0 mt-6 sm:mt-8 rounded-full origin-left"
         ></motion.div>
 
-        {/* Animated Feature Cards */}
-        <div className="mt-12 flex flex-col md:flex-row justify-center md:justify-start gap-6">
+        {/* Feature cards container */}
+        <div
+          className="
+            mt-10 sm:mt-14 
+            flex flex-col sm:flex-row flex-wrap 
+            justify-center sm:justify-center lg:justify-start 
+            gap-6 sm:gap-8 md:gap-10 
+            max-w-5xl mx-auto lg:mx-0
+          "
+        >
           {[
             {
               emoji: "💡",
@@ -85,13 +94,21 @@ export default function About() {
                 boxShadow: "0 0 20px rgba(255, 247, 5, 0.4)",
                 transition: { type: "tween", duration: 0.1 },
               }}
-              className={`relative flex flex-col items-center justify-center ${item.color} rounded-xl px-6 py-6 md:px-8 md:py-8 shadow-lg cursor-pointer select-none transition-all duration-300 md:text-left`}
+              className={`
+                relative flex flex-col items-center justify-center
+                ${item.color}
+                rounded-xl px-6 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12
+                shadow-lg cursor-pointer select-none transition-all duration-300
+                w-full sm:w-[46%] lg:w-[30%] text-center
+              `}
             >
-              <span className="text-4xl mb-3">{item.emoji}</span>
-              <h3 className="text-2xl font-heading font-bold mb-2">
+              <span className="text-3xl sm:text-4xl md:text-5xl mb-3">
+                {item.emoji}
+              </span>
+              <h3 className="text-xl sm:text-2xl font-heading font-bold mb-2">
                 {item.title}
               </h3>
-              <p className="text-sm text-center md:text-base max-w-[16rem]">
+              <p className="text-sm sm:text-base text-background/90 leading-relaxed max-w-[18rem]">
                 {item.desc}
               </p>
             </motion.div>
@@ -99,9 +116,9 @@ export default function About() {
         </div>
       </motion.div>
 
-      {/* Floating background icons (decorative) */}
+      {/* Floating icons (decorative) */}
       <motion.div
-        className="absolute -bottom-20 right-10 text-secondary/30 text-[6rem] select-none"
+        className="absolute -bottom-10 right-4 sm:right-10 text-secondary/30 text-[4rem] sm:text-[5rem] md:text-[6rem] select-none"
         animate={{ y: [0, -10, 0] }}
         transition={{ duration: 5, repeat: Infinity }}
       >
@@ -109,7 +126,7 @@ export default function About() {
       </motion.div>
 
       <motion.div
-        className="absolute top-10 left-10 text-secondary/30 text-[5rem] select-none"
+        className="absolute top-4 sm:top-10 left-4 sm:left-10 text-secondary/30 text-[4rem] sm:text-[5rem] md:text-[6rem] select-none"
         animate={{ y: [0, 15, 0] }}
         transition={{ duration: 4, repeat: Infinity }}
       >

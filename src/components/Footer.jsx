@@ -11,7 +11,7 @@ export default function Footer() {
       className="relative bg-primary text-background py-12 md:py-16 mt-auto overflow-hidden"
     >
       {/* Subtle top divider */}
-      <div className="absolute top-0 left-0 w-full h-[1px] bg-secondary/40"></div>
+      <div className="absolute top-0 left-0 w-full h-px bg-secondary/40"></div>
 
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
         {/* Left - Logo & tagline */}
@@ -33,9 +33,9 @@ export default function Footer() {
           {/* Social Icons */}
           <div className="flex gap-5 mt-4">
             {[
-            { icon: <FaGithub />, link: "https://github.com/" },
-            { icon: <FaLinkedin />, link: "https://linkedin.com/" },
-            { icon: <FaDiscord />, link: "https://discord.com/" },
+            { icon: <FaGithub />, link: "https://github.com/BuildClubCET" },
+            { icon: <FaLinkedin />, link: "https://www.linkedin.com/company/build-club-cet/" },
+            { icon: <FaDiscord />, link: "https://discord.com/invite/D54tWnv4dU" },
             { icon: <FaTwitter />, link: "https://twitter.com/" },
             ].map((social, i) => (
             <motion.a
@@ -63,7 +63,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Middle - Map (optional) */}
+        {/* Middle - Map */}
         <div className="hidden md:flex justify-center">
           <iframe
             title="Buildclub Location"
@@ -108,7 +108,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom bar */}
+      {/* Copyrights */}
       <div className="text-center text-sm text-gray-400 mt-12">
         © {new Date().getFullYear()} <span className="text-secondary font-semibold">Buildclub</span> — All rights reserved.
       </div>
